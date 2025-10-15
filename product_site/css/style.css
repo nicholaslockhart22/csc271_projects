@@ -1,37 +1,140 @@
 /* 
   Author: Nick Lockhart
-  Date: October 5, 2025
-  Description: Style.css Hair Apparent website.
+  Date: October 14, 2025
+  Description: Style.css – Hair Apparent website layout and responsive design.
 */
 
-
-/* Background color for all pages */
+/* ---------- GLOBAL STYLING ---------- */
 body {
-  background-color: rgb(255, 254, 254);
+  background-color: #fffdfd;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #333;
-  margin: 40px;
+  margin: 0;
   line-height: 1.6;
 }
 
-/* Main headlines (H1) */
+/* ---------- HEADER ---------- */
+.header {
+  overflow: hidden;                  /* contains floated elements */
+  background-color: #304d30;         /* deep green background */
+  padding: 10px 20px;
+}
+
+.header img {
+  float: left;
+  width: 60px;                      /* smaller logo */
+  height: auto;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.header nav {
+  float: right;
+  margin-top: 10px;                 /* vertically aligns links with logo */
+}
+
+.header a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #c59d5f;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.header a.active {
+  background-color: #ffffff;
+  color: #304d30;
+  border-radius: 6px;
+}
+
+/* ---------- RESPONSIVE HEADER ---------- */
+@media screen and (max-width: 600px) {
+  .header {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .header img {
+    float: none;
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;        /* slightly larger logo for small screens */
+  }
+
+  .header nav {
+    float: none;
+    margin: 0;
+  }
+
+  .header a {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .header a:first-child {
+    border-top: none; /* removes top border from first link */
+  }
+}
+
+
+/* ---------- MAIN CONTENT LAYOUT ---------- */
+.content {
+  float: none;
+  width: 75%;
+  background-color: #fafafa;
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- IMAGES ---------- */
+img {
+  float: none;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(15, 14, 14, 0.2);
+}
+
+/* Wrap text properly when images are floated in content */
+.float-left {
+  float: left;
+  margin: 0 20px 15px 0;
+}
+.float-right {
+  float: right;
+  margin: 0 0 15px 20px;
+}
+
 h1 {
   color: #793636;
   font-size: 2.2em;
   text-align: center;
-  font-weight: bold;
   border-bottom: 3px solid #c59d5f;
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
 
-/* Subheadings (H2 and H3) */
 h2, h3 {
   color: #3b6b46;
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Paragraphs */
 p {
   font-size: 1.05em;
   color: #1a1919;
@@ -40,31 +143,7 @@ p {
   text-align: center;
 }
 
-/* ---------- IMAGES ---------- */
-img {
-  display: block;
-  margin: 15px auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(15, 14, 14, 0.2);
-}
-
-/* ---------- LINKS ---------- */
-a {
-  color: #30843e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:visited {
-  color: #3b8a43;
-}
-
-a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* ---------- NAVIGATION ---------- */
+/* ---------- FOOTER OR NAVIGATION AREA ---------- */
 nav {
   background-color: #f1f1f1;
   border-radius: 10px;
@@ -83,54 +162,31 @@ nav li {
   margin: 0 15px;
 }
 
-/* ---------- TABLE STYLING ---------- */
-table {
-  border-collapse: collapse;
-  margin: 20px auto;
-  width: 70%;
+/* ---------- RESPONSIVE WEB DESIGN ---------- */
+@media screen and (max-width: 600px) {
+  .header img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 15px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
 
-th {
-  background-color: #1e793b;
-  color: white;
-}
-
-/* ---------- FORM STYLING ---------- */
-form {
-  background-color: #47724b;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  width: 60%;
-  margin: 0 auto;
-}
-
-input, select {
-  padding: 6px;
-  margin: 5px 0;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #180303;
-}
-
-/* ---------- ID AND CLASS SELECTORS ---------- */
-
-/* ID Selector Example */
-#featured-style {
-  background-color: #11100e;
-  padding: 15px;
-  border: 2px solid #0f0a04;
-  border-radius: 10px;
-}
-
-/* Class Selector Example */
-.highlight {
-  color: #392f20;
-  font-weight: bold;
-}

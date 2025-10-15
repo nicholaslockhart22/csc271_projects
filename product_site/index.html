@@ -1,81 +1,93 @@
-
 <!DOCTYPE html>
 <!-- 
-    Author: Nick Lockhart
-    Date: September 21, 2025
-    Description: Homepage for Hair Apparent barbershop. 
-    Includes headings, paragraphs, formatting, list, links, and contact info. 
+  Author: Nick Lockhart
+  Date: October 14, 2025
+  Description: Homepage for Hair Apparent barbershop with layout and navigation styling.
 -->
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hair Apparent - Your Local Barbershop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Apparent - Your Local Barbershop</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Main Heading -->
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <img src="images/logo.png" alt="Hair Apparent logo">
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="appointment.html">Services</a>
+      <a href="hair.html">Hairstyles</a>
+    </nav>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
     <h1>Welcome to Hair Apparent</h1>
-    <!-- Logo -->
-  <img src="images/logo.png" alt="hair apparent Logo" width="150" height="150">
 
-    <!-- Introductory Description -->
     <p>
-        In the City by the Sea, competition for the haircutting dollar can be fierce. Newport measures less than 12 square miles, but residents and visitors have more than 30 options when looking to get their hair done. Amid the choices, a neighborhood barbershop on Thames Street called Hair Apparent has built a reputation for friendly service, skilled barbers, and a laid-back atmosphere that keeps customers coming back. By combining traditional barbershop values with the convenience of modern appointment scheduling, Hair Apparent has carved out its own space in a crowded market.
+      In the City by the Sea, competition for the haircutting dollar can be fierce. Newport measures less than 12 square miles, 
+      but residents and visitors have more than 30 options when looking to get their hair done. Amid the choices, a neighborhood barbershop on Thames Street called 
+      <strong>Hair Apparent</strong> has built a reputation for friendly service, skilled barbers, and a laid-back atmosphere that keeps customers coming back. 
+      By combining traditional barbershop values with the convenience of modern appointment scheduling, Hair Apparent has carved out its own space in a crowded market.
+    </p>
 
-        At <strong>Hair Apparent</strong>, we provide professional cuts, fresh fades, 
-        and excellent service. Our goal is to make your visit quick, easy, 
-        and enjoyable. <em>No more long waits or unorganized walk-ins!</em>
+    <img src="images/dave.jpg" alt="Hair Apparent" class="float-right" width="300">
+
+    <p>
+      At <strong>Hair Apparent</strong>, we provide professional cuts, fresh fades, 
+      and excellent service. Our goal is to make your visit quick, easy, 
+      and enjoyable. <em>No more long waits or unorganized walk-ins!</em>
     </p>
 
     <hr>
 
-    <!-- Subsection: Why Choose Us -->
     <h2>Why Choose Hair Apparent?</h2>
     <p>
-        Our website helps solve the common barbershop problem of waiting in line. 
-        You can <strong>book online</strong> or call us directly so you’ll always 
-        know when it’s your turn in the chair.
+      Our website helps solve the common barbershop problem of waiting in line. 
+      You can <strong>book online</strong> or call us directly so you’ll always 
+      know when it’s your turn in the chair.
     </p>
 
-    <!-- Unordered List of Features -->
     <ul>
-        <li><strong>Book Online:</strong> Reserve your appointment ahead of time.</li>
-        <li><strong>Walk-Ins Welcome:</strong> But appointments always come first.</li>
-        <li><strong>Professional Staff:</strong> Friendly barbers ready to help.</li>
+      <li><strong>Book Online:</strong> Reserve your appointment ahead of time.</li>
+      <li><strong>Walk-Ins Welcome:</strong> But appointments always come first.</li>
+      <li><strong>Professional Staff:</strong> Friendly barbers ready to help.</li>
     </ul>
 
-    <br>
-
-    <!-- Subsection: Booking -->
     <h2>Book Your Appointment</h2>
     <p>
-        Use our easy scheduling system to reserve your spot today. 
-        <em>Skip the hassle, save your time, and look your best.</em>
+      Use our easy scheduling system to reserve your spot today. 
+      <em>Skip the hassle, save your time, and look your best.</em>
     </p>
 
     <hr>
 
-    <!-- Subsection: Contact -->
     <h2>Contact Us</h2>
     <p>
-        Prefer to call? Reach us at <strong>(401) 123-4567</strong>.  
-        You can also email us at 
-        <a href="mailto:nick_lockhart@uri.edu">nick_lockhart@uri.edu</a>. 
-        We look forward to seeing you at Hair Apparent!
+      Prefer to call? Reach us at <strong>(401) 123-4567</strong>.  
+      You can also email us at 
+      <a href="mailto:nick_lockhart@uri.edu">nick_lockhart@uri.edu</a>. 
+      We look forward to seeing you at Hair Apparent!
     </p>
 
     <hr>
 
-    <!-- Links Section -->
     <h2>Explore More</h2>
-    <p>
-        <!-- Relative Link -->
-        <a href="index.html">Return to Homepage</a><br>
-        
-        <!-- Absolute Link, opens new tab -->
-        <a href="https://www.menshairstyletrends.com/" target="_blank">
-            Visit Men's Hair Trends
-        </a>
-    </p>
-</body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home Page</a></li>
+        <li><a href="appointment.html">Services Page</a></li>
+        <li><a href="hair.html">Hairstyles Page</a></li>
+        <li><a href="https://www.menshairstyletrends.com/" target="_blank">Men's Hair Trends</a></li>
+      </ul>
+    </nav>
+  </div>
 
+</body>
+</html>

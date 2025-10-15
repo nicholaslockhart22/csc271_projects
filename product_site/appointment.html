@@ -1,115 +1,118 @@
 <!DOCTYPE html>
 <!-- 
   Author: Nick Lockhart
-  Date: September 30, 2025
-  Description: Second web page for haircut booking-->
+  Date: October 14, 2025
+  Description: Booking and services page for Hair Apparent barbershop with layout and navigation styling.
+-->
 
 <html lang="en">
 <head>
-  <title>Book Your Haircut</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Apparent | Book Your Haircut</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- Main Heading -->
-  <h1>Book Your Haircut Appointment</h1>
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <img src="images/logo.png" alt="Hair Apparent logo">
 
-  <!-- Welcome Paragraph -->
-  <p>Welcome to our booking page! Select your preferred day and time, 
-     enter your details, and we’ll reserve your spot. We look forward 
-     to giving you a fresh cut!</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="appointment.html" class="active">Services</a>
+      <a href="hair.html">Hairstyles</a>
+    </nav>
+  </div>
 
-  <!-- Logo -->
-  <img src="images/logo.png" alt="hair apparent Logo" width="150" height="150">
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+    <h1>Book Your Haircut Appointment</h1>
 
-  <!-- Images -->
-  <h2>Example Work</h2>
-  <img src="images/fade.jpg" alt="Example haircut fade style" width="200" height="200">
-  <img src="images/beardtrim.webp" alt="Beard trim example" width="210" height="200">
+    <p>
+      Welcome to our booking page! Select your preferred day and time, 
+      enter your details, and we’ll reserve your spot. We look forward 
+      to giving you a fresh cut!
+    </p>
 
-  <!-- Table of Haircut Types & Prices -->
-  <h2>Services & Prices</h2>
-  <table border="1" cellpadding="8">
-    <thead>
-      <tr>
-        <th>Type of Haircut</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Standard Cut</td>
-        <td>$25</td>
-      </tr>
-      <tr>
-        <td>Fade</td>
-        <td>$30</td>
-      </tr>
-      <tr>
-        <td>Buzz Cut</td>
-        <td>$20</td>
-      </tr>
-      <tr>
-        <td>Haircut + Beard Trim</td>
-        <td>$40</td>
-      </tr>
-    </tbody>
-  </table>
+    <img src="images/logo.png" alt="Hair Apparent Logo" width="150" height="150">
 
-  <!-- Booking Form -->
-  <h2>Schedule Your Appointment</h2>
-  <form action="#" method="post">
+    <h2>Example Work</h2>
+    <img src="images/fade.jpg" alt="Example haircut fade style" class="float-left" width="220">
+    <img src="images/beardtrim.webp" alt="Beard trim example" class="float-right" width="220">
 
-    <!-- Day Selection -->
-    <label for="day">Choose a day:</label>
-    <select id="day" name="day" required>
-      <option value="">-- Select a day --</option>
-      <option value="monday">Monday</option>
-      <option value="tuesday">Tuesday</option>
-      <option value="wednesday">Wednesday</option>
-      <option value="thursday">Thursday</option>
-      <option value="friday">Friday</option>
-    </select>
-    <br><br>
+    <p style="clear: both;">
+      From quick fades to full styling and beard trims, our team makes sure you walk out feeling sharp and confident.
+    </p>
 
-    <!-- Time Selection -->
-    <label for="time">Choose a time:</label>
-    <select id="time" name="time" required>
-      <option value="">-- Select a time --</option>
-      <option value="9am">9:00 AM</option>
-      <option value="10am">10:00 AM</option>
-      <option value="11am">11:00 AM</option>
-      <option value="12pm">12:00 PM</option>
-      <option value="1pm">1:00 PM</option>
-      <option value="2pm">2:00 PM</option>
-      <option value="3pm">3:00 PM</option>
-      <option value="4pm">4:00 PM</option>
-      <option value="5pm">5:00 PM</option>
-    </select>
-    <br><br>
+    <h2>Services & Prices</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Type of Haircut</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Standard Cut</td><td>$25</td></tr>
+        <tr><td>Fade</td><td>$30</td></tr>
+        <tr><td>Buzz Cut</td><td>$20</td></tr>
+        <tr><td>Haircut + Beard Trim</td><td>$40</td></tr>
+      </tbody>
+    </table>
 
-    <!-- Name Input -->
-    <label for="fullname">First and Last Name:</label>
-    <input type="text" id="fullname" name="fullname" required maxlength="50">
-    <br><br>
+    <h2>Schedule Your Appointment</h2>
+    <form action="#" method="post">
+      <label for="day">Choose a day:</label>
+      <select id="day" name="day" required>
+        <option value="">-- Select a day --</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+      </select>
 
-    <!-- Submit -->
-    <input type="submit" value="Book Appointment">
-  </form>
+      <label for="time">Choose a time:</label>
+      <select id="time" name="time" required>
+        <option value="">-- Select a time --</option>
+        <option value="9am">9:00 AM</option>
+        <option value="10am">10:00 AM</option>
+        <option value="11am">11:00 AM</option>
+        <option value="12pm">12:00 PM</option>
+        <option value="1pm">1:00 PM</option>
+        <option value="2pm">2:00 PM</option>
+        <option value="3pm">3:00 PM</option>
+        <option value="4pm">4:00 PM</option>
+        <option value="5pm">5:00 PM</option>
+      </select>
 
-  <!-- Video Embed -->
-  <h2>Here are some examples for men</h2>
-  <iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/GsdbEmuYz-E" 
-  title="Haircut Tutorial Video" 
-  frameborder="0" 
-  allowfullscreen>
-</iframe>
+      <label for="fullname">First and Last Name:</label>
+      <input type="text" id="fullname" name="fullname" required maxlength="50">
 
+      <input type="submit" value="Book Appointment">
+    </form>
 
-  <!-- Link back to First Page -->
-  <p><a href="index.html">Return to Home Page</a></p>
+    <h2>Video Link</h2>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/GsdbEmuYz-E" 
+      title="Haircut Tutorial Video" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+
+    <hr>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="services.html" class="active">Services Page</a></li>
+        <li><a href="hair.html">Hairstyles Page</a></li>
+      </ul>
+    </nav>
+  </div>
 
 </body>
 </html>

@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <!-- 
-Name: Nick Lockhart
-Date: October 5, 2025
-Description: This third web page showcases different hairstyles offered at Hair Apparent, featuring descriptions, images, and navigation links.
+  Author: Nick Lockhart
+  Date: October 14, 2025
+  Description: Hairstyle showcase page for Hair Apparent barbershop.
 -->
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Apparent | Hairstyles</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Apparent | Hairstyles</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Main Heading -->
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <img src="images/logo.png" alt="Hair Apparent logo">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Services</a>
+      <a href="hairstyles.html" class="active">Hairstyles</a>
+    </nav>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
     <h1>Popular Hairstyles at Hair Apparent</h1>
 
-    <!-- Introduction -->
     <p>Explore a variety of stylish looks created by our expert barbers. Whether you’re looking for something classic or bold, our team can make it happen.</p>
 
-    <!-- Hairstyles Section -->
     <section>
-        <h2>Fade Cuts</h2>
-        <img src="images/fade-cut.jpg" alt="Man with a clean fade haircut" width="300">
-        <p>The fade is a timeless style that blends the hair from short to long. Great for a modern and clean look.</p>
+      <h2>Fade Cuts</h2>
+      <img src="images/fade.jpg" alt="Man with a clean fade haircut" class="float-left" width="300">
+      <p>The fade is a timeless style that blends the hair from short to long. Great for a modern and clean look.</p>
     </section>
 
     <section>
-        <h2>Curly Top</h2>
-        <img src="images/curly-top.jpg" alt="Curly top hairstyle" width="300">
-        <p>Perfect for people with natural curls—this style keeps volume on top while staying neat on the sides.</p>
+      <h2>Curly Top</h2>
+      <img src="images/curly.webp" alt="Curly top hairstyle" class="float-right" width="300">
+      <p>Perfect for people with natural curls—this style keeps volume on top while staying neat on the sides.</p>
     </section>
 
     <section>
-        <h2>Classic Crew Cut</h2>
-        <img src="images/crew-cut.jpg" alt="Classic crew cut hairstyle" width="300">
-        <p>A simple, low-maintenance haircut ideal for anyone wanting a sharp and professional appearance.</p>
+      <h2>Classic Crew Cut</h2>
+      <img src="images/crew-cut.jpg" alt="Classic crew cut hairstyle" class="float-left" width="300">
+      <p>A simple, low-maintenance haircut ideal for anyone wanting a sharp and professional appearance.</p>
     </section>
 
     <section>
-        <h2>Long Textured Style</h2>
-        <img src="images/long-textured.jpg" alt="Long textured hairstyle" width="300">
-        <p>For those who like to keep it long — textured layers add depth and movement for a more natural, flowing look.</p>
+      <h2>Long Textured Style</h2>
+      <img src="images/long-textured.jpg" alt="Long textured hairstyle" class="float-right" width="300">
+      <p>For those who like to keep it long — textured layers add depth and movement for a more natural, flowing look.</p>
     </section>
 
-    <!-- Links to Other Pages -->
     <hr>
     <nav>
-        <h3>Explore More</h3>
-        <ul>
-            <li><a href="index.html">Home Page</a></li>
-            <li><a href="services.html">Services Page</a></li>
-            <li><a href="hairstyles.html">Current Page (Hairstyles)</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="appointment.html">Services Page</a></li>
+        <li><a href="hairstyles.html" class="active">Current Page</a></li>
+      </ul>
     </nav>
-
+  </div>
 
 </body>
 </html>
