@@ -1,6 +1,6 @@
 /* 
   Author: Nick Lockhart
-  Date: October 14, 2025
+  Date: October 21, 2025
   Description: Style.css – Hair Apparent website layout and responsive design.
 */
 
@@ -88,7 +88,6 @@ body {
   }
 }
 
-
 /* ---------- MAIN CONTENT LAYOUT ---------- */
 .content {
   float: none;
@@ -116,11 +115,13 @@ img {
   float: left;
   margin: 0 20px 15px 0;
 }
+
 .float-right {
   float: right;
   margin: 0 0 15px 20px;
 }
 
+/* ---------- HEADINGS & TEXT ---------- */
 h1 {
   color: #793636;
   font-size: 2.2em;
@@ -143,9 +144,18 @@ p {
   text-align: center;
 }
 
+/* ---------- VIDEO CAPTION ---------- */
+.video-caption {
+  font-size: 0.9em;
+  color: #444;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+}
+
 /* ---------- FOOTER OR NAVIGATION AREA ---------- */
 nav {
-  background-color: #f1f1f1;
+  background-color: #6c8aa0;
   border-radius: 10px;
   padding: 10px;
   width: fit-content;
@@ -164,6 +174,12 @@ nav li {
 
 /* ---------- RESPONSIVE WEB DESIGN ---------- */
 @media screen and (max-width: 600px) {
+
+  body {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
   .header img {
     float: none;
     display: block;
@@ -173,20 +189,67 @@ nav li {
   .header a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
     padding: 10px;
   }
 
+  h1 {
+    font-size: 1.8em;
+    padding-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
   .content {
-    width: 100%;
-    font-size: 1.1em;
+    width: 95%;
+    font-size: 1.05em;
     padding: 15px;
+    box-shadow: none; /* flatter style for mobile */
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    display: block;
+    margin: 10px 0;
   }
 
   img {
     width: 100%;
     height: auto;
   }
+
+  /* ---------- MOBILE FORM LAYOUT ---------- */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form label, 
+  form input, 
+  form select {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    background-color: #304d30;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #c59d5f;
+  }
 }
-
-

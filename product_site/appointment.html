@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <!-- 
   Author: Nick Lockhart
-  Date: October 14, 2025
-  Description: Booking and services page for Hair Apparent barbershop with layout and navigation styling.
+  Date: October 21, 2025
+  File: appointment.html
+  Description: Booking and services page for Hair Apparent Barbershop in Newport, RI.
 -->
 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hair Apparent | Book Your Haircut</title>
+
+  <!-- ✅ Page Title -->
+  <title>Hair Apparent Barbershop | Book Your Haircut & Fade in Newport RI</title>
+
+  <!-- ✅ Meta Description -->
+  <meta name="description" content="Book your haircut or fade at Hair Apparent Barbershop in Newport RI. Choose from fades, crew cuts, buzz cuts, and beard trims. Walk-ins welcome or reserve online!">
+
+  <!-- ✅ Open Graph Tags -->
+  <meta property="og:title" content="Book Your Haircut | Hair Apparent Barbershop Newport RI">
+  <meta property="og:description" content="Fresh fades, crew cuts, and beard trims — book your appointment today at Hair Apparent Barbershop in Newport RI.">
+  <meta property="og:image" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/images/fade.jpg">
+  <meta property="og:url" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/appointment.html">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TXL0ES7P7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8TXL0ES7P7');
+  </script>
 </head>
 
 <body>
 
   <!-- ===== HEADER ===== -->
-  <div class="header">
-    <img src="images/logo.png" alt="Hair Apparent logo">
+  <header class="header">
+    <img src="images/logo.png" alt="Hair Apparent barbershop logo Newport RI" width="60" height="60">
 
     <nav>
       <a href="index.html">Home</a>
       <a href="appointment.html" class="active">Services</a>
       <a href="hair.html">Hairstyles</a>
     </nav>
-  </div>
+  </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <div class="content">
+  <main class="content">
     <h1>Book Your Haircut Appointment</h1>
 
     <p>
-      Welcome to our booking page! Select your preferred day and time, 
-      enter your details, and we’ll reserve your spot. We look forward 
-      to giving you a fresh cut!
+      Welcome to <strong>Hair Apparent Barbershop</strong> — Newport’s go-to spot for 
+      <strong>fade haircuts</strong>, <strong>beard trims</strong>, and clean, modern styles. 
+      Use our online booking system to reserve your haircut or stop by for a quick walk-in.
     </p>
 
-    <img src="images/logo.png" alt="Hair Apparent Logo" width="150" height="150">
+    <img src="images/logo.png" alt="Hair Apparent barbershop logo" width="150" height="150">
 
-    <h2>Example Work</h2>
-    <img src="images/fade.jpg" alt="Example haircut fade style" class="float-left" width="220">
-    <img src="images/beardtrim.webp" alt="Beard trim example" class="float-right" width="220">
+    <!-- ===== OUR WORK SECTION ===== -->
+    <h2>Our Work</h2>
+    <img src="images/fade.jpg" alt="Man with fresh fade haircut at Hair Apparent Newport RI" class="float-left" width="220">
+    <img src="images/beardtrim.webp" alt="Professional beard trim example at Hair Apparent" class="float-right" width="220">
 
     <p style="clear: both;">
-      From quick fades to full styling and beard trims, our team makes sure you walk out feeling sharp and confident.
+      From clean fades to full beard trims, our skilled barbers make sure you leave looking your best. 
+      Every style is crafted with precision, care, and attention to detail.
     </p>
 
+    <!-- ===== SERVICES TABLE ===== -->
     <h2>Services & Prices</h2>
     <table>
       <thead>
         <tr>
-          <th>Type of Haircut</th>
+          <th>Service</th>
           <th>Price</th>
         </tr>
       </thead>
       <tbody>
         <tr><td>Standard Cut</td><td>$25</td></tr>
-        <tr><td>Fade</td><td>$30</td></tr>
+        <tr><td>Fade Haircut</td><td>$30</td></tr>
         <tr><td>Buzz Cut</td><td>$20</td></tr>
         <tr><td>Haircut + Beard Trim</td><td>$40</td></tr>
       </tbody>
     </table>
 
-    <h2>Schedule Your Appointment</h2>
+    <!-- ===== BOOKING FORM ===== -->
+    <h2>Book Your Appointment</h2>
     <form action="#" method="post">
       <label for="day">Choose a day:</label>
       <select id="day" name="day" required>
@@ -94,25 +122,34 @@
       <input type="submit" value="Book Appointment">
     </form>
 
-    <h2>Video Link</h2>
+    <!-- ===== VIDEO SECTION ===== -->
+    <h2>Watch a Barber in Action</h2>
     <iframe 
       width="560" 
       height="315" 
       src="https://www.youtube.com/embed/GsdbEmuYz-E" 
-      title="Haircut Tutorial Video" 
+      title="Haircut tutorial video - fade haircut demonstration" 
       frameborder="0" 
       allowfullscreen>
     </iframe>
 
+    <!--  Accessible Caption -->
+    <p class="video-caption">
+      <em>Watch different 2025 hairstyles.</em>
+    </p>
+
     <hr>
+
+    <!-- ===== NAVIGATION LINKS ===== -->
+    <h2>Explore More</h2>
     <nav>
       <ul>
         <li><a href="index.html">Home Page</a></li>
-        <li><a href="services.html" class="active">Services Page</a></li>
+        <li><a href="appointment.html" class="active">Services Page</a></li>
         <li><a href="hair.html">Hairstyles Page</a></li>
       </ul>
     </nav>
-  </div>
+  </main>
 
 </body>
 </html>
