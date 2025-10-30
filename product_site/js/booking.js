@@ -22,7 +22,7 @@ document.getElementById("bookBtn").addEventListener("click", function() {
 
   // Calculate Price 
   var basePrice = SERVICE_PRICES[serviceType];
-  var addOnPrice = beardTrim ? 10;
+  var addOnPrice = beardTrim ? 10:0;
   var totalPrice = basePrice + addOnPrice;
 
   //  Output Message 
