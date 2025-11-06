@@ -90,37 +90,56 @@
     </table>
 
     <!-- ===== BOOKING FORM ===== -->
-    <h2>Book Your Appointment</h2>
-    <form action="#" method="post">
-      <label for="day">Choose a day:</label>
-      <select id="day" name="day" required>
-        <option value="">-- Select a day --</option>
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-      </select>
+<h2>Book Your Appointment</h2>
+<form id="bookingForm">
 
-      <label for="time">Choose a time:</label>
-      <select id="time" name="time" required>
-        <option value="">-- Select a time --</option>
-        <option value="9am">9:00 AM</option>
-        <option value="10am">10:00 AM</option>
-        <option value="11am">11:00 AM</option>
-        <option value="12pm">12:00 PM</option>
-        <option value="1pm">1:00 PM</option>
-        <option value="2pm">2:00 PM</option>
-        <option value="3pm">3:00 PM</option>
-        <option value="4pm">4:00 PM</option>
-        <option value="5pm">5:00 PM</option>
-      </select>
+  <label for="service">Choose Your Haircut:</label>
+  <select id="service" name="service" required>
+    <option value="">-- Select a service --</option>
+    <option value="standard">Standard Cut ($25)</option>
+    <option value="fade">Fade Haircut ($30)</option>
+    <option value="buzz">Buzz Cut ($20)</option>
+  </select>
 
-      <label for="fullname">First and Last Name:</label>
-      <input type="text" id="fullname" name="fullname" required maxlength="50">
+  <label>
+    <input type="checkbox" id="beardTrim"> Add Beard Trim (+$10)
+  </label>
 
-      <input type="submit" value="Book Appointment">
-    </form>
+  <label for="day">Choose a day:</label>
+  <select id="day" name="day" required>
+    <option value="">-- Select a day --</option>
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+    <option>Thursday</option>
+    <option>Friday</option>
+  </select>
+
+  <label for="time">Choose a time:</label>
+  <select id="time" name="time" required>
+    <option value="">-- Select a time --</option>
+    <option>9:00 AM</option>
+    <option>10:00 AM</option>
+    <option>11:00 AM</option>
+    <option>12:00 PM</option>
+    <option>1:00 PM</option>
+    <option>2:00 PM</option>
+    <option>3:00 PM</option>
+    <option>4:00 PM</option>
+    <option>5:00 PM</option>
+  </select>
+
+  <label for="fullname">First and Last Name:</label>
+  <input type="text" id="fullname" name="fullname" required maxlength="50">
+
+  <!-- Confirmation message display box -->
+  <p id="confirmation-message"></p>
+
+  <!-- Button triggers script -->
+  <input type="button" id="bookBtn" value="Book Appointment">
+
+</form>
+
 
     <!-- ===== VIDEO SECTION ===== -->
     <h2>Watch a Barber in Action</h2>
