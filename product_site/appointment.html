@@ -15,7 +15,7 @@
   <title>Hair Apparent Barbershop | Book Your Haircut & Fade in Newport RI</title>
 
   <!-- ✅ Meta Description -->
-  <meta name="description" content="Book your haircut or fade at Hair Apparent Barbershop in Newport RI. Choose from fades, crew cuts, buzz cuts, and beard trims. Walk-ins welcome or reserve online!">
+  <meta name="description" content="Book your haircut or fade at Hair Apparent Barbershop in Newport RI. Choose from fades, crew cuts, buzz cuts, and beard trims. Try our haircut recommender below!">
 
   <!-- ✅ Open Graph Tags -->
   <meta property="og:title" content="Book Your Haircut | Hair Apparent Barbershop Newport RI">
@@ -42,8 +42,7 @@
   <!-- ===== HEADER ===== -->
   <header class="header">
     <img src="images/logo.png" alt="Hair Apparent barbershop logo Newport RI" width="60" height="60">
-
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="appointment.html" class="active">Services</a>
       <a href="hair.html">Hairstyles</a>
@@ -66,7 +65,6 @@
     <h2>Our Work</h2>
     <img src="images/fade.jpg" alt="Man with fresh fade haircut at Hair Apparent Newport RI" class="float-left" width="220">
     <img src="images/beardtrim.webp" alt="Professional beard trim example at Hair Apparent" class="float-right" width="220">
-
     <p style="clear: both;">
       From clean fades to full beard trims, our skilled barbers make sure you leave looking your best. 
       Every style is crafted with precision, care, and attention to detail.
@@ -90,58 +88,71 @@
     </table>
 
     <!-- ===== BOOKING FORM ===== -->
-<h2>Book Your Appointment</h2>
-<form id="bookingForm">
+    <h2>Book Your Appointment</h2>
+    <form id="bookingForm">
 
-  <label for="service">Choose Your Haircut:</label>
-  <select id="service" name="service" required>
-    <option value="">-- Select a service --</option>
-    <option value="standard">Standard Cut ($25)</option>
-    <option value="fade">Fade Haircut ($30)</option>
-    <option value="buzz">Buzz Cut ($20)</option>
-  </select>
+      <label for="service">Choose Your Haircut:</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select a service --</option>
+        <option value="standard">Standard Cut ($25)</option>
+        <option value="fade">Fade Haircut ($30)</option>
+        <option value="buzz">Buzz Cut ($20)</option>
+      </select>
 
-  <label>
-    <input type="checkbox" id="beardTrim"> Add Beard Trim (+$10)
-  </label>
+      <label>
+        <input type="checkbox" id="beardTrim"> Add Beard Trim (+$10)
+      </label>
 
-  <label for="day">Choose a day:</label>
-  <select id="day" name="day" required>
-    <option value="">-- Select a day --</option>
-    <option>Monday</option>
-    <option>Tuesday</option>
-    <option>Wednesday</option>
-    <option>Thursday</option>
-    <option>Friday</option>
-  </select>
+      <label for="day">Choose a day:</label>
+      <select id="day" name="day" required>
+        <option value="">-- Select a day --</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+      </select>
 
-  <label for="time">Choose a time:</label>
-  <select id="time" name="time" required>
-    <option value="">-- Select a time --</option>
-    <option>9:00 AM</option>
-    <option>10:00 AM</option>
-    <option>11:00 AM</option>
-    <option>12:00 PM</option>
-    <option>1:00 PM</option>
-    <option>2:00 PM</option>
-    <option>3:00 PM</option>
-    <option>4:00 PM</option>
-    <option>5:00 PM</option>
-  </select>
+      <label for="time">Choose a time:</label>
+      <select id="time" name="time" required>
+        <option value="">-- Select a time --</option>
+        <option>9:00 AM</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+        <option>3:00 PM</option>
+        <option>4:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
 
-  <label for="fullname">First and Last Name:</label>
-  <input type="text" id="fullname" name="fullname" required maxlength="50">
+      <label for="fullname">First and Last Name:</label>
+      <input type="text" id="fullname" name="fullname" required maxlength="50">
 
-  <!-- Confirmation message display box -->
-  <p id="confirmation-message"></p>
+      <p id="confirmation-message"></p>
 
-  <!-- Button triggers script -->
-  <input type="button" id="bookBtn" value="Book Appointment">
+      <input type="button" id="bookBtn" value="Book Appointment">
+    </form>
 
-</form>
+    <hr>
 
+    <!-- ===== DECISION TREE FEATURE ===== -->
+    <section id="decision-section">
+      <h2>Find Your Perfect Haircut</h2>
+      <p>Answer a few quick questions to discover which haircut suits you best!</p>
+      <div id="decisionTree"></div>
+    </section>
 
-    <!-- ===== VIDEO SECTION ===== -->
+    <!-- ===== LOOP SECTION ===== -->
+    <section id="loop-section">
+      <div id="loop-output1"></div>
+      <div id="loop-output2"></div>
+    </section>
+
+    <hr>
+
+    <!-- ===== VIDEO ===== -->
     <h2>Watch a Barber in Action</h2>
     <iframe 
       width="560" 
@@ -151,11 +162,7 @@
       frameborder="0" 
       allowfullscreen>
     </iframe>
-
-    <!--  Accessible Caption -->
-    <p class="video-caption">
-      <em>Watch different 2025 hairstyles.</em>
-    </p>
+    <p class="video-caption"><em>Watch different 2025 hairstyles.</em></p>
 
     <hr>
 
@@ -169,6 +176,11 @@
       </ul>
     </nav>
   </main>
- <script src="js/booking.js"></script>
+
+  
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/booking.js"></script>
+  <script src="js/decision.js"></script>
 </body>
 </html>
