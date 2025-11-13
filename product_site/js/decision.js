@@ -3,7 +3,6 @@
   Date: October 21, 2025
   File: decisionTree.js
   Description: Interactive haircut recommendation 
-    ATTENTION!!! FOR THIS ASSIGNMENT I TURNED IT IN LATE ON WEDNESDAY. I LEARNED AND ADDED FUNCTIONS IN TO MAKE IT LOOK AND WORK BETTTER             
 */
 
 // Section 1: Haircut Decision Tree 
@@ -69,7 +68,7 @@ function createButtons(options, callback) {
   }
 }
 
-// Step 1: Length Decision Node
+// Length Decision Node
 function handleLength(choice) {
   // Boolean evaluation example 1
   var shortHair = (choice === "Short");
@@ -84,7 +83,7 @@ function handleLength(choice) {
   }
 }
 
-// Step 2: Maintenance Decision Node
+// Maintenance Decision Node
 function handleMaintenance(choice) {
   // Boolean evaluation example 2 
   var lowMaintenance = (choice === "Low-Maintenance");
@@ -127,12 +126,8 @@ function showRestart() {
   buttonContainer.appendChild(restartBtn);
 }
 
-// --------------------------
-// Section 2: Dynamic Content with Loops
-// --------------------------
-
+// Dynamic Content with Loops
 // FOR LOOP — display featured services
-// Why: A "for" loop is ideal for fixed-length arrays like our service list.
 var services = ["Fade Haircut", "Crew Cut", "Buzz Cut", "Beard Trim"];
 var serviceList = document.getElementById("loop-output1");
 serviceList.innerHTML = "<h3>Featured Services:</h3>";
@@ -142,7 +137,6 @@ for (var i = 0; i < services.length; i++) {
 }
 
 // WHILE LOOP — simulate countdown to next available booking slot
-// Why: A "while" loop works well for repeating a calculation until a condition changes.
 var timeEl = document.getElementById("loop-output2");
 var countdown = 3; // next available booking in 3 hours
 var message = "<h3>Next Available Booking Countdown:</h3>";

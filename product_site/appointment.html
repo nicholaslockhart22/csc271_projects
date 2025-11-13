@@ -11,30 +11,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ Page Title -->
+  <!-- Page Title -->
   <title>Hair Apparent Barbershop | Book Your Haircut & Fade in Newport RI</title>
 
-  <!-- ✅ Meta Description -->
+  <!-- Meta Description -->
   <meta name="description" content="Book your haircut or fade at Hair Apparent Barbershop in Newport RI. Choose from fades, crew cuts, buzz cuts, and beard trims. Try our haircut recommender below!">
 
-  <!-- ✅ Open Graph Tags -->
+  <!-- Open Graph Tags -->
   <meta property="og:title" content="Book Your Haircut | Hair Apparent Barbershop Newport RI">
   <meta property="og:description" content="Fresh fades, crew cuts, and beard trims — book your appointment today at Hair Apparent Barbershop in Newport RI.">
   <meta property="og:image" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/images/fade.jpg">
   <meta property="og:url" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/appointment.html">
   <meta property="og:type" content="website">
 
-  <!-- ✅ Stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- ✅ Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TXL0ES7P7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8TXL0ES7P7');
-  </script>
 </head>
 
 <body>
@@ -59,9 +50,9 @@
       Use our online booking system to reserve your haircut or stop by for a quick walk-in.
     </p>
 
+    <!-- ===== OUR WORK SECTION ===== -->
     <img src="images/logo.png" alt="Hair Apparent barbershop logo" width="150" height="150">
 
-    <!-- ===== OUR WORK SECTION ===== -->
     <h2>Our Work</h2>
     <img src="images/fade.jpg" alt="Man with fresh fade haircut at Hair Apparent Newport RI" class="float-left" width="220">
     <img src="images/beardtrim.webp" alt="Professional beard trim example at Hair Apparent" class="float-right" width="220">
@@ -101,7 +92,15 @@
 
       <label>
         <input type="checkbox" id="beardTrim"> Add Beard Trim (+$10)
-      </label>
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="studentDiscount"> Student Discount (10% off)
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="militaryDiscount"> Military Discount (10% off)
+      </label><br>
 
       <label for="day">Choose a day:</label>
       <select id="day" name="day" required>
@@ -152,20 +151,6 @@
 
     <hr>
 
-    <!-- ===== VIDEO ===== -->
-    <h2>Watch a Barber in Action</h2>
-    <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/GsdbEmuYz-E" 
-      title="Haircut tutorial video - fade haircut demonstration" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
-    <p class="video-caption"><em>Watch different 2025 hairstyles.</em></p>
-
-    <hr>
-
     <!-- ===== NAVIGATION LINKS ===== -->
     <h2>Explore More</h2>
     <nav>
@@ -177,10 +162,10 @@
     </nav>
   </main>
 
-  
-
   <!-- ===== SCRIPTS ===== -->
   <script src="js/booking.js"></script>
+    <!-- ===== Defer so that is runs after html ===== -->
+
   <script src="js/decision.js"></script>
 </body>
 </html>
