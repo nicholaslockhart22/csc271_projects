@@ -3,7 +3,6 @@
   Date: October 21, 2025
   File: decisionTree.js
   Description: Interactive haircut recommendation 
-    ATTENTION!!! FOR THIS ASSIGNMENT I TURNED IT IN LATE ON WEDNESDAY. I LEARNED AND ADDED FUNCTIONS IN TO MAKE IT LOOK AND WORK BETTTER             
 */
 
 // Section 1: Haircut Decision Tree 
