@@ -1,19 +1,64 @@
-
 //
-  //Author: Nick Lockhart
-  //Date: Nov 18, 2025
-  //File: booking.js
-  //Description: js for booking apt.
+//  Author: Nick Lockhart
+//  Date: Nov 18, 2025
+//  File: booking.js
+//  Description: js for booking apt + object constructor + validation
+//
+
+// ===============================
 // PRICE LIST FOR HAIRCUT TYPES 
+// ===============================
 var SERVICE_PRICES = {
   standard: 25,
   fade: 30,
   buzz: 20
 };
 
+// ===============================
+// BOOKING OBJECT CONSTRUCTOR
+// ===============================
+function Booking(name, service, day, time, beardTrim) {
+  this.name = name;
+  this.service = service;
+  this.day = day;
+  this.time = time;
+  this.beardTrim = beardTrim;
 
+  // method: calculate price
+  this.calculateTotal = function() {
+    var base = SERVICE_PRICES[this.service];
+    var addOn = this.beardTrim ? 10 : 0;
+    return base + addOn;
+  };
 
+  // method: formatted confirmation message
+  this.confirmMessage = function() {
+    return (
+      this.name +
+      " booked a " + this.service +
+      " haircut on " + this.day +
+      " at " + this.time +
+      ". Total: $" + this.calculateTotal()
+    );
+  };
+}
+
+// Create two example booking objects
+var example1 = new Booking("John Doe", "fade", "Tuesday", "2:00 PM", true);
+var example2 = new Booking("Emily Smith", "buzz", "Friday", "11:00 AM", false);
+
+// Display objects on page
+var outputArea = document.getElementById("object-output");
+if (outputArea) {
+  outputArea.innerHTML =
+    "<h3>Example Booking Objects</h3>" +
+    "<p>" + example1.confirmMessage() + "</p>" +
+    "<p>" + example2.confirmMessage() + "</p>";
+}
+
+// ===============================
 //  Select form elements 
+// ===============================
 var fullNameInput = document.getElementById("fullname");
 var serviceInput = document.getElementById("service");
 var dayInput = document.getElementById("day");
@@ -21,7 +66,9 @@ var timeInput = document.getElementById("time");
 var form = document.getElementById("bookingForm");
 var msgEl = document.getElementById("confirmation-message");
 
-// Focus Events: Give user feedback 
+// ===============================
+// Focus Events
+// ===============================
 fullNameInput.addEventListener("focus", function() {
   msgEl.textContent = "Please enter your full name. It cannot be left blank.";
 });
@@ -35,11 +82,12 @@ dayInput.addEventListener("focus", function() {
 });
 
 timeInput.addEventListener("focus", function() {
-  msgEl.textContent = "Select a time slot available between 9AM–5PM.";
+  msgEl.textContent = "Select a time between 9AM–5PM.";
 });
 
-// Blur Events: 
-
+// ===============================
+// Blur Events (validation)
+// ===============================
 fullNameInput.addEventListener("blur", function() {
   if (fullNameInput.value.trim() === "") {
     msgEl.textContent = "Error: Name cannot be blank.";
@@ -72,13 +120,17 @@ timeInput.addEventListener("blur", function() {
   }
 });
 
+// ===============================
 // FORM SUBMISSION EVENT 
+// ===============================
 form.addEventListener("submit", function(event) {
-  event.preventDefault(); // stop form from reloading page
+  event.preventDefault();
   msgEl.textContent = "Your responses were successfully recorded!";
 });
 
-// BUTTON CLICK EVENT 
+// ===============================
+// BOOK BUTTON CLICK EVENT 
+// ===============================
 document.getElementById("bookBtn").addEventListener("click", function() {
 
   // Collect User Input 
@@ -94,19 +146,9 @@ document.getElementById("bookBtn").addEventListener("click", function() {
     return;
   }
 
-  // Calculate Price 
-  var basePrice = SERVICE_PRICES[serviceType];
-  var addOnPrice = beardTrim ? 10 : 0;
-  var totalPrice = basePrice + addOnPrice;
+  // Create a Booking object from user input
+  var userBooking = new Booking(fullName, serviceType, chosenDay, chosenTime, beardTrim);
 
-  // Output Message 
-  var message = "Thank you " + fullName +
-                " for booking a " + serviceType +
-                " haircut at " + chosenTime +
-                " on " + chosenDay +
-                ". Your total is $" + totalPrice +
-                ". We are looking forward to seeing you!";
-
-  // Show Message  
-  msgEl.textContent = message;
+  // Output Message  
+  msgEl.textContent = userBooking.confirmMessage();
 });
