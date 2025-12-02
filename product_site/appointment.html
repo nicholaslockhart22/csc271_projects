@@ -11,30 +11,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ Page Title -->
   <title>Hair Apparent Barbershop | Book Your Haircut & Fade in Newport RI</title>
 
-  <!-- ✅ Meta Description -->
   <meta name="description" content="Book your haircut or fade at Hair Apparent Barbershop in Newport RI. Choose from fades, crew cuts, buzz cuts, and beard trims. Try our haircut recommender below!">
 
-  <!-- ✅ Open Graph Tags -->
   <meta property="og:title" content="Book Your Haircut | Hair Apparent Barbershop Newport RI">
   <meta property="og:description" content="Fresh fades, crew cuts, and beard trims — book your appointment today at Hair Apparent Barbershop in Newport RI.">
   <meta property="og:image" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/images/fade.jpg">
   <meta property="og:url" content="https://nicklockhart22.rhody.dev/csc271_projects/product_site/appointment.html">
   <meta property="og:type" content="website">
 
-  <!-- ✅ Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- ✅ Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TXL0ES7P7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8TXL0ES7P7');
-  </script>
 </head>
 
 <body>
@@ -83,7 +70,7 @@
         <tr><td>Standard Cut</td><td>$25</td></tr>
         <tr><td>Fade Haircut</td><td>$30</td></tr>
         <tr><td>Buzz Cut</td><td>$20</td></tr>
-        <tr><td>Haircut + Beard Trim</td><td>$40</td></tr>
+        <tr><td>Beard Trim</td><td>$10</td></tr>
       </tbody>
     </table>
 
@@ -101,7 +88,15 @@
 
       <label>
         <input type="checkbox" id="beardTrim"> Add Beard Trim (+$10)
-      </label>
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="studentDiscount"> Student Discount (10% off)
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="militaryDiscount"> Military Discount (10% off)
+      </label><br>
 
       <label for="day">Choose a day:</label>
       <select id="day" name="day" required>
@@ -166,21 +161,22 @@
 
     <hr>
 
-    <!-- ===== NAVIGATION LINKS ===== -->
-    <h2>Explore More</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home Page</a></li>
-        <li><a href="appointment.html" class="active">Services Page</a></li>
-        <li><a href="hair.html">Hairstyles Page</a></li>
-      </ul>
-    </nav>
-  </main>
+<!-- ===== NAVIGATION LINKS ===== -->
+<h2>Explore More</h2>
+<nav class="explore-nav">
+  <ul>
+    <li><a href="index.html">Home Page</a></li>
+    <li><a href="appointment.html" class="active">Services Page</a></li>
+    <li><a href="hair.html">Hairstyles Page</a></li>
+  </ul>
+</nav>
 
-  
+
+  </main>
 
   <!-- ===== SCRIPTS ===== -->
   <script src="js/booking.js"></script>
-  <script src="js/decision.js"></script>
+  <script src="js/decision.js" defer></script>
+
 </body>
 </html>

@@ -275,3 +275,104 @@ nav li {
 }
 
 
+/* ---------- TABLE STYLING ---------- */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+table thead {
+  background-color: #304d30;   /* deep green */
+  color: #ffffff;
+}
+
+table th, table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 1.05em;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;   /* light gray alternate rows */
+}
+
+table tbody tr:hover {
+  background-color: #c59d5f33;  /* light gold hover */
+  transition: 0.2s ease;
+}
+
+table th {
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+/* ---------- EXPLORE MORE NAVIGATION ---------- */
+nav.explore-nav {
+  background-color: #304d30;     /* deep green */
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+nav.explore-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav.explore-nav li {
+  display: inline-block;
+}
+
+nav.explore-nav a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.05em;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+nav.explore-nav a:hover {
+  background-color: #c59d5f;     /* gold hover */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+nav.explore-nav a.active {
+  background-color: #ffffff;
+  color: #304d30;
+  border-radius: 6px;
+}
+
+/* ---------- BOOKING CONFIRMATION MESSAGE ---------- */
+#confirmation-message {
+  margin-top: 15px;
+  padding: 12px 18px;
+  background-color: #f5f1e8;      /* warm light background */
+  border-left: 5px solid #c59d5f; /* gold accent */
+  color: #304d30;                 /* dark green text */
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;                  /* stays hidden until message appears */
+}
+
+/* Show it when text is added */
+#confirmation-message.show {
+  display: block;
+}
