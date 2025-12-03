@@ -35,22 +35,25 @@ function Booking(name, service, day, time, beardTrim, isStudent, isMilitary) {
   };
 
   this.confirmMessage = function() {
+    var total = this.calculateTotal();
     var msg =
-      this.name + " booked a " + this.service +
+      "Thank you " + this.name +
+      " for booking a " + this.service +
       " haircut on " + this.day +
       " at " + this.time + ".";
 
     if (this.beardTrim) {
-      msg += " (Includes Beard Trim)";
+      msg += " Includes a beard trim.";
     }
     if (this.isStudent || this.isMilitary) {
       msg += " A 10% discount was applied.";
     }
 
-    msg += " Total: $" + this.calculateTotal().toFixed(2);
+    msg += " Total: $" + total;
     return msg;
   };
 }
+
 
 // ===============================
 // FORM ELEMENTS
@@ -137,8 +140,12 @@ document.getElementById("bookBtn").addEventListener("click", function() {
     return;
   }
 
-  var newBooking = new Booking(name, service, day, time, beardTrim, isStudent, isMilitary);
+  var newBooking = new Booking(
+    name, service, day, time, 
+    beardTrim, isStudent, isMilitary
+  );
+
   msgEl.textContent = newBooking.confirmMessage();
-  
+  msgEl.classList.add("show");
 });
 
