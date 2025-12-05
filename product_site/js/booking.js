@@ -62,38 +62,44 @@ var fullNameInput = document.getElementById("fullname");
 var serviceInput = document.getElementById("service");
 var dayInput = document.getElementById("day");
 var timeInput = document.getElementById("time");
+var helpEl = document.getElementById("help-message");
 var msgEl = document.getElementById("confirmation-message");
+
 
 // ===============================
 // POP-UP MESSAGES (FOCUS EVENTS)
 // ===============================
+// ===============================
+// POP-UP MESSAGES (FOCUS EVENTS)
+// ===============================
 fullNameInput.addEventListener("focus", function() {
-  msgEl.textContent = "Please enter your full name.";
+  helpEl.textContent = "Please enter your full name.";
 });
 
 serviceInput.addEventListener("focus", function() {
-  msgEl.textContent = "Choose your haircut style.";
+  helpEl.textContent = "Choose your haircut style.";
 });
 
 document.getElementById("beardTrim").addEventListener("focus", function() {
-  msgEl.textContent = "Add a beard trim for $10.";
+  helpEl.textContent = "Add a beard trim for $10.";
 });
 
 document.getElementById("studentDiscount").addEventListener("focus", function() {
-  msgEl.textContent = "Students get 10% off!";
+  helpEl.textContent = "Students get 10% off!";
 });
 
 document.getElementById("militaryDiscount").addEventListener("focus", function() {
-  msgEl.textContent = "Military discount: 10% off.";
+  helpEl.textContent = "Military discount: 10% off.";
 });
 
 dayInput.addEventListener("focus", function() {
-  msgEl.textContent = "Pick a weekday for your appointment.";
+  helpEl.textContent = "Pick a weekday for your appointment.";
 });
 
 timeInput.addEventListener("focus", function() {
-  msgEl.textContent = "Choose a time between 9–5.";
+  helpEl.textContent = "Choose a time between 9–5.";
 });
+
 
 // ===============================
 // VALIDATION (BLUR EVENTS)

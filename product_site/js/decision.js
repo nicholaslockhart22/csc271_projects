@@ -5,12 +5,12 @@
   Description: Interactive haircut recommendation 
 */
 
-// Section 1: Haircut Decision Tree 
+// Haircut Decision Tree 
 
 
 var app = document.getElementById("decisionTree");
 
-// Step 1: Haircut data and starting setup
+// Haircut data and starting setup
 var recommendations = {
   crew: "Crew Cut — clean, classic, and easy to maintain.",
   fade: "Fade Haircut — modern, sharp, and stylish.",

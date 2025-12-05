@@ -28,17 +28,23 @@
 
   <!-- ===== HEADER ===== -->
   <header class="header">
+
+  <nav aria-label="Main navigation">
     <img src="images/logo.png" alt="Hair Apparent barbershop logo Newport RI" width="60" height="60">
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="appointment.html" class="active">Services</a>
-      <a href="hair.html">Hairstyles</a>
-    </nav>
-  </header>
+
+    <a href="index.html">Home </a>
+    <a href="appointment.html" class="active">Services</a>
+    <a href="hair.html">Hairstyles</a>
+    <a href="appointment.html" class="book-now-btn">Book Appointment!</a>
+  </nav>
+
+  
+</header>
+
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="content">
-    <h1>Book Your Haircut Appointment</h1>
+    <h1>BOOK YOUR HAIR APPOINTMENT NOW!</h1>
 
     <p>
       Welcome to <strong>Hair Apparent Barbershop</strong> — Newport’s go-to spot for 
@@ -124,6 +130,7 @@
 
       <label for="fullname">First and Last Name:</label>
       <input type="text" id="fullname" name="fullname" required maxlength="50">
+      <p id="help-message" class="help-box"></p>
 
       <p id="confirmation-message"></p>
 
@@ -147,17 +154,21 @@
 
     <hr>
 
-    <!-- ===== VIDEO ===== -->
-    <h2>Watch a Barber in Action</h2>
+   <!-- ===== VIDEO ===== -->
+<section class="video-section">
+  <h2>Watch a Barber in Action</h2>
+
+  <div class="video-wrapper">
     <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/GsdbEmuYz-E" 
-      title="Haircut tutorial video - fade haircut demonstration" 
-      frameborder="0" 
+      src="https://www.youtube.com/embed/GsdbEmuYz-E"
+      title="Haircut tutorial video - fade haircut demonstration"
+      frameborder="0"
       allowfullscreen>
     </iframe>
-    <p class="video-caption"><em>Watch different 2025 hairstyles.</em></p>
+  </div>
+
+  <p class="video-caption"><em>Watch different 2025 hairstyles.</em></p>
+</section>
 
     <hr>
 
